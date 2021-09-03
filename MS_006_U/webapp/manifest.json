@@ -1,0 +1,52 @@
+{
+  "_version": "1.32.0",
+  "sap.app": {
+    "id": "home",
+    "description": "{{APP_DESCRIPTION}}",
+    "applicationVersion": "1.0.0",
+    "type": "application",
+    "title": "{{APP_TITLE}}",
+    "i18n": "i18n/i18n.properties" 
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "sap-icon://home"
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.87.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.ui.layout": {},
+        "sap.ui.table": {}
+      }
+    },
+    "library": {
+        "css":"css/mystyle.css"
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n":{
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri" :"i18n/i18n.properties"
+              },
+        "":{
+                "type": "sap.ui.model.json.JSONModel",
+                "uri" : "model/mockdata/cars.json"
+              }
+
+    }
+  }
+}

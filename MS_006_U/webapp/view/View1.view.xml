@@ -1,0 +1,103 @@
+<mvc:View xmlns:mvc = 'sap.ui.core.mvc'
+          xmlns = 'sap.m'
+          controllerName="home.controller.View1">
+<Page title="{i18n>XITI_VIEW1}">
+<headerContent>
+<Button icon="sap-icon://action" press="onPress"></Button>
+</headerContent>
+<!-- 1 <Button text="Next" icon="sap-icon://arrow-right" press="onPress"></Button> -->
+
+<content>
+ 
+<SearchField id="isSF" search="onSearch" liveChange="onSearch"></SearchField>
+<List id="idList" mode="Delete" delete="onDelete" 
+itemPress="onRowClick"  items="{
+    path : '/cars',
+    sorter:  { path : 'Car'
+    }}">
+    <items>
+        <!-- <DisplayListItem label="{Car}" value="{category}"></DisplayListItem> -->
+        <ObjectListItem type="Navigation" intro="{model}" title="{Car}"
+            number="{seater}" numberUnit="{price}"
+            icon="{image}"></ObjectListItem>
+
+        <!-- <DisplayListItem label="Andra Pradesh" value="Famous for KIA cars"></DisplayListItem>
+
+
+        <StandardListItem title="KIA" description="New Brand Car with Autmotic gears" 
+            icon="https://gatewaykia.com.au/images/showroom/sportage.png"
+        ></StandardListItem>
+        <StandardListItem title="MARUTHI" description="Best suitable for Indian roads" 
+            icon="https://www.bookyourcar.co.in/uploads/colorimage/90838_maruti-suzuki-s-presso-sizzle-orange.png"
+        ></StandardListItem>
+
+        <InputListItem>
+            <HBox>
+                <Label text="KIA Car Rating"/> 
+                <RatingIndicator></RatingIndicator>
+            </HBox>
+        </InputListItem>
+
+        
+        <InputListItem>
+            <HBox>
+                <Label text="Maruthi Car Rating" />
+                <RatingIndicator></RatingIndicator>
+            </HBox>
+        </InputListItem>
+
+        <CustomListItem>
+            <Label text="Looking for luxary / normal cars"/>
+            <Switch ></Switch>
+        </CustomListItem>
+
+
+        <ObjectListItem title="KIA Sonet" intro="Top end model" 
+        icon="https://gatewaykia.com.au/images/showroom/sportage.png" 
+        number="76" numberUnit="Units">
+            <attributes>
+                <ObjectAttribute text="White" title="Color"></ObjectAttribute>
+                <ObjectAttribute text="7.2Lack" title="Starting Price"></ObjectAttribute>
+            </attributes>
+            <firstStatus >
+                <ObjectStatus text="Avaliable" state="Success"></ObjectStatus>
+            </firstStatus>
+        </ObjectListItem>            
+
+
+        <ObjectListItem title="Maruthi Breeza" intro="Low budget SUV" 
+        icon="https://www.bookyourcar.co.in/uploads/colorimage/90838_maruti-suzuki-s-presso-sizzle-orange.png" 
+        number="324" numberUnit="Units">
+            <attributes>
+                <ObjectAttribute text="Orange" title="Color"></ObjectAttribute>
+                <ObjectAttribute text="7.5 Lack" title="Starting Price"></ObjectAttribute>
+            </attributes>
+            <firstStatus >
+                <ObjectStatus text="High bookings" state="Warning"></ObjectStatus>
+            </firstStatus>
+        
+        </ObjectListItem>            
+
+        <FeedListItem icon="https://www.bookyourcar.co.in/uploads/colorimage/90838_maruti-suzuki-s-presso-sizzle-orange.png" 
+        sender="Maruthi Sales Team" text="Festival Special offer 15%" timestamp="Thrusday 22 July 2021 "></FeedListItem>
+
+
+        <FeedListItem icon="https://gatewaykia.com.au/images/showroom/sportage.png" 
+        sender="KIA Sales Team" text="Festival Special offer 7%" timestamp="Thrusday 22 July 2021 "></FeedListItem>
+
+        <ActionListItem press="onPress" text="Book Dream Car Now"></ActionListItem> -->
+
+    </items>
+</List>
+</content>
+<!-- <footer>
+    <Toolbar >
+    <ToolbarSpacer />
+        <Button text="Maruthi Bookings" type="Emphasized"></Button>
+        <Button text="KIA Bookings" type="Unstyled"></Button>
+    </Toolbar>
+
+</footer> -->
+
+</Page>    
+</mvc:View>            
